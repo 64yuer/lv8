@@ -1,0 +1,68 @@
+# === OS ===
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# === Secrets ===
+.env
+.env.*
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+/build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# === IDE ===
+.idea/
+.vscode/
+
+# === Project ===
+# 本地实验产物 / 抓包 / 样本（勿入库）
+*.har
+*.log
+samples/
+scratch/
+
+# === native (C++ 转轨 G0) ===
+# V8 源码树 / depot_tools / 构建产物不入库（~40GB，可随时重建）
+native/stpyv8/v8/
+native/stpyv8/depot_tools/
+# gclient 本地工作区状态（fetch v8 时生成）
+native/stpyv8/.gclient*
+native/stpyv8/.gcs_entries
+native/stpyv8/.cipd/
+native/stpyv8/build/
+native/stpyv8/out.gn/
+native/stpyv8/**/*.pyd
+native/boost/
+native/build/build.log
+# Linux 轮子产物（WSL G4.21 渠道产出；.so 可由 build-all.sh 重建）
+native/stpyv8/**/*.so
+/dist-linux/
+# lexbor 源码克隆与构建产物不入库（可由 build-lexbor.cmd 重建）
+native/lexbor/
+native/build/*.log
+work/tmp-ess/
+
+# === G4 后构建/实验产物（本地可重建，不入库） ===
+dist-windows/
+dist-wheels/
+.venv312-win/
+.venv312-linux/
+.tmp-reference-wheel/
+work/conformance/
+work/fixtures/
+native/stpyv8/*.pdb
+work/reference-traces/scope-dumps.json

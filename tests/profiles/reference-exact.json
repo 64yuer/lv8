@@ -1,0 +1,53 @@
+{
+  "derivedFields": {
+    "arch": "x86_64",
+    "chromeMajor": "127",
+    "chromeVersion": "127.0.0.0",
+    "mobile": false,
+    "osFamily": "windows",
+    "pointerCoarse": false,
+    "primaryLanguage": "en-US",
+    "uaPlatformToken": "Windows NT 10.0; Win64; x64"
+  },
+  "fields": {
+    "appVersion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+    "brands": [
+      {
+        "brand": "Google Chrome",
+        "version": "127"
+      },
+      {
+        "brand": "Not_A Brand",
+        "version": "8"
+      },
+      {
+        "brand": "Chromium",
+        "version": "127"
+      }
+    ],
+    "deviceMemory": 8,
+    "devicePixelRatio": 1,
+    "hardwareConcurrency": 8,
+    "language": "en-US",
+    "languages": [
+      "en-US",
+      "en"
+    ],
+    "maxTouchPoints": 0,
+    "platform": "Win32",
+    "screen": {
+      "availHeight": 1040,
+      "availWidth": 1920,
+      "colorDepth": 24,
+      "height": 1080,
+      "pixelDepth": 24,
+      "width": 1920
+    },
+    "timezone": null,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+  },
+  "overrides": {},
+  "profileHash": "sha256:4983f525d9f75f7ed2c24f046391392f",
+  "profileId": "reference-exact",
+  "schemaVersion": 1
+}

@@ -1,0 +1,12 @@
+build
+dist
+.cache
+.cipd
+*.egg-info
+.gclient*
+depot_tools
+v8
+switch_repo*
+*.pyc
+*.cmake
+.idea

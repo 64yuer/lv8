@@ -1,0 +1,168 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  V8_TAG: 13.1.201.22
+  BOOST_VER: 1.84.0
+
+jobs:
+  native:
+    name: native ${{ matrix.os }} ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    env:
+      LV8_CI: "1"
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2022]
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install packaging tools
+        run: python -m pip install pytest wheel setuptools
+
+      # The V8 checkout (depot_tools sync + clang toolchain + monolith) is the
+      # multi-hour stage; everything else rebuilds in minutes.  Boost is cached
+      # per ABI because its python library is ABI-specific.
+      - name: Cache V8 tree
+        uses: actions/cache@v4
+        with:
+          path: |
+            native/stpyv8/v8
+            native/stpyv8/.gclient
+          key: lv8-v8-${{ runner.os }}-${{ env.V8_TAG }}
+
+      - name: Cache Boost
+        uses: actions/cache@v4
+        with:
+          path: native/boost/boost_1_84_0
+          key: lv8-boost-${{ runner.os }}-${{ env.BOOST_VER }}-${{ matrix.python-version }}
+
+      - name: Cache lexbor
+        uses: actions/cache@v4
+        with:
+          path: native/lexbor
+          key: lv8-lexbor-${{ runner.os }}-26a8819b
+
+      - name: Build V8 + Boost + lexbor + extension (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          bash native/build/posix/build-all.sh \
+            --v8-tag "$V8_TAG" \
+            --boost "$BOOST_VER" \
+            --python "$(command -v python)"
+
+      - name: Configure git for depot_tools
+        if: runner.os == 'Windows'
+        run: git config --global depot-tools.allowGlobalGitConfig true
+
+      - name: Bootstrap depot_tools (Windows)
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: |
+          cd /d %GITHUB_WORKSPACE%\native\stpyv8
+          if not exist depot_tools (
+            git clone --depth 1 https://chromium.googlesource.com/chromium/tools/depot_tools.git depot_tools
+          )
+          @echo on
+          call depot_tools\update_depot_tools.bat
+          rem Skip the (broken-from-TEMP-copy) auto-update on later invocations
+          rem inside build-v8.cmd; the fresh clone is current by definition.
+          type nul > depot_tools\.disable_auto_update
+          if exist depot_tools\.cipd_client.exe (dir depot_tools\.cipd_client.exe) else (echo NO_CIPD_CLIENT)
+
+      - name: Locate Visual Studio (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $vs = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -version "[17.0,18.0)" -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+          if (-not $vs) { throw 'vswhere found no Visual Studio with VC tools' }
+          Add-Content $env:GITHUB_ENV "VS2022_INSTALL=$vs"
+          Write-Host "VS2022_INSTALL=$vs"
+
+      - name: Build V8 (Windows)
+        if: runner.os == 'Windows'
+        env:
+          GIT_EXE: git.exe
+          LV8_PYTHON: ${{ env.pythonLocation }}\python.exe
+        shell: cmd
+        run: native\build\build-v8.cmd
+
+      - name: Build Boost (Windows)
+        if: runner.os == 'Windows'
+        env:
+          LV8_PYTHON: ${{ env.pythonLocation }}\python.exe
+        shell: cmd
+        run: call native\build\build-boost.cmd "%pythonLocation%"
+
+      - name: Build lexbor (Windows)
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: native\build\build-lexbor.cmd
+
+      - name: Build extension (Windows)
+        if: runner.os == 'Windows'
+        env:
+          LV8_PYTHON: ${{ env.pythonLocation }}\python.exe
+        shell: cmd
+        run: call native\build\build-ext.cmd "%pythonLocation%"
+
+      - name: Gate tests (in-tree extension)
+        run: python -m pytest -q
+
+      - name: Build platform wheel
+        run: python native/build/build-wheel.py
+
+      - name: Smoke test the wheel
+        shell: bash
+        run: |
+          python -m venv .venv-smoke
+          if [ -x .venv-smoke/bin/python ]; then SMOKE_PY=.venv-smoke/bin/python; else SMOKE_PY=.venv-smoke/Scripts/python; fi
+          "$SMOKE_PY" -m pip install dist-wheels/lv8py-*.whl
+          "$SMOKE_PY" native/build/wheel-smoke.py
+
+      - name: Upload bundle + wheel
+        uses: actions/upload-artifact@v4
+        with:
+          name: lv8-${{ matrix.os }}-${{ matrix.python-version }}
+          path: |
+            dist-linux/lv8-native-*/
+            dist-windows/lv8-native-*/
+            dist-wheels/*.whl
+          if-no-files-found: error
+
+  release:
+    name: Publish wheels to PyPI
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: native
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all wheel artifacts
+        uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+          path: release
+
+      - name: Publish
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          ls -l release/dist-wheels/*.whl
+          python -m pip install twine
+          python -m twine upload --non-interactive --skip-existing release/dist-wheels/lv8py-*.whl

@@ -1,0 +1,143 @@
+#ifndef _WIN32
+#include "Python.h"
+#endif
+
+#include "Utils.h"
+
+#include <vector>
+#include <iterator>
+
+#include "utf8.h"
+//#include "Locker.h" //TODO port me
+
+v8::Handle<v8::String> ToString(const std::string& str)
+{
+    v8::EscapableHandleScope scope(v8::Isolate::GetCurrent());
+
+    return scope.Escape(
+               v8::String::NewFromUtf8(
+                   v8::Isolate::GetCurrent(),
+                   str.c_str(),
+                   v8::NewStringType::kNormal,
+                   str.size())
+               .ToLocalChecked());
+}
+
+v8::Handle<v8::String> ToString(const std::wstring& str)
+{
+    v8::EscapableHandleScope scope(v8::Isolate::GetCurrent());
+
+    if (sizeof(wchar_t) == sizeof(uint16_t))
+    {
+        return scope.Escape(
+                   v8::String::NewFromTwoByte(
+                       v8::Isolate::GetCurrent(),
+                       reinterpret_cast<const uint16_t *>(str.c_str()),
+                       v8::NewStringType::kNormal,
+                       str.size())
+                   .ToLocalChecked());
+    }
+
+    std::vector<uint16_t> data(str.size()+1);
+
+    for (size_t i=0; i<str.size(); i++)
+    {
+        data[i] = (uint16_t) str[i];
+    }
+
+    data[str.size()] = 0;
+
+    return scope.Escape(
+               v8::String::NewFromTwoByte(
+                   v8::Isolate::GetCurrent(),
+                   &data[0],
+                   v8::NewStringType::kNormal,
+                   str.size())
+               .ToLocalChecked());
+}
+
+v8::Handle<v8::String> ToString(py::object str)
+{
+    v8::EscapableHandleScope scope(v8::Isolate::GetCurrent());
+
+    if (PyBytes_CheckExact(str.ptr()))
+    {
+        return scope.Escape(
+                   v8::String::NewFromUtf8(
+                       v8::Isolate::GetCurrent(),
+                       PyBytes_AS_STRING(str.ptr()),
+                       v8::NewStringType::kNormal,
+                       PyBytes_GET_SIZE(str.ptr()))
+                   .ToLocalChecked());
+    }
+
+    if (PyUnicode_CheckExact(str.ptr()))
+    {
+        int kind = PyUnicode_KIND(str.ptr());
+        void *dp = PyUnicode_DATA(str.ptr());
+
+        Py_ssize_t len = PyUnicode_GET_LENGTH(str.ptr());
+        std::vector<uint16_t> data(len + 1);
+
+        for (Py_ssize_t i = 0; i < len; i++) {
+            data[i] = (uint16_t) PyUnicode_READ(kind, dp, i);
+        }
+
+        data[len] = 0;
+
+        return scope.Escape(
+                   v8::String::NewFromTwoByte(
+                       v8::Isolate::GetCurrent(),
+                       &data[0],
+                       v8::NewStringType::kNormal,
+                       len)
+                   .ToLocalChecked());
+    }
+
+    return ToString(py::object(py::handle<>(::PyObject_Str(str.ptr()))));
+}
+
+v8::Handle<v8::String> DecodeUtf8(const std::string& str)
+{
+    v8::EscapableHandleScope scope(v8::Isolate::GetCurrent());
+
+    std::vector<uint16_t> data;
+
+    try
+    {
+        utf8::utf8to16(str.begin(), str.end(), std::back_inserter(data));
+
+        return scope.Escape(v8::String::NewFromTwoByte(v8::Isolate::GetCurrent(), &data[0], v8::NewStringType::kNormal, data.size()).ToLocalChecked());
+    }
+    catch (const std::exception&)
+    {
+        return scope.Escape(v8::String::NewFromUtf8(v8::Isolate::GetCurrent(), str.c_str(), v8::NewStringType::kNormal, str.size()).ToLocalChecked());
+    }
+}
+
+const std::string EncodeUtf8(const std::wstring& str)
+{
+    std::vector<uint8_t> data;
+
+    if (sizeof(wchar_t) == sizeof(uint16_t))
+    {
+        utf8::utf16to8(str.begin(), str.end(), std::back_inserter(data));
+    }
+    else
+    {
+        utf8::utf32to8(str.begin(), str.end(), std::back_inserter(data));
+    }
+
+    return std::string((const char *) &data[0], data.size());
+}
+
+
+CPythonGIL::CPythonGIL()
+{
+    m_state = ::PyGILState_Ensure();
+}
+
+CPythonGIL::~CPythonGIL()
+{
+    ::PyGILState_Release(m_state);
+}

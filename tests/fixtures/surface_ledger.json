@@ -1,0 +1,1722 @@
+{
+  "default": {
+    "aligned": [
+      "AbortController",
+      "AbortSignal",
+      "AudioBuffer",
+      "AudioContext",
+      "AudioNode",
+      "BaseAudioContext",
+      "Blob",
+      "CSSStyleDeclaration",
+      "CanvasRenderingContext2D",
+      "Comment",
+      "DOMTokenList",
+      "Document",
+      "Element",
+      "EventTarget",
+      "FormData",
+      "HTMLAnchorElement",
+      "HTMLCanvasElement",
+      "HTMLCollection",
+      "HTMLDivElement",
+      "HTMLElement",
+      "HTMLFormElement",
+      "HTMLImageElement",
+      "HTMLInputElement",
+      "HTMLMediaElement",
+      "HTMLScriptElement",
+      "Headers",
+      "History",
+      "Location",
+      "Navigator",
+      "Node",
+      "NodeList",
+      "OscillatorNode",
+      "Performance",
+      "Request",
+      "Response",
+      "Screen",
+      "Storage",
+      "Text",
+      "URL",
+      "URLSearchParams",
+      "WebGL2RenderingContext",
+      "WebGLRenderingContext",
+      "Worker"
+    ],
+    "misaligned": [],
+    "mode": "default",
+    "prototypes": {
+      "AbortController": {
+        "enumN": {
+          "ref": 2,
+          "lv8": 2
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 3,
+          "lv8": 3
+        },
+        "value_diff": []
+      },
+      "AbortSignal": {
+        "enumN": {
+          "ref": 7,
+          "lv8": 4
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 5,
+          "lv8": 5
+        },
+        "value_diff": []
+      },
+      "AudioBuffer": {
+        "enumN": {
+          "ref": 7,
+          "lv8": 7
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 8,
+          "lv8": 8
+        },
+        "value_diff": []
+      },
+      "AudioContext": {
+        "enumN": {
+          "ref": 41,
+          "lv8": 38
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 13,
+          "lv8": 13
+        },
+        "value_diff": []
+      },
+      "AudioNode": {
+        "enumN": {
+          "ref": 11,
+          "lv8": 8
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 9,
+          "lv8": 9
+        },
+        "value_diff": []
+      },
+      "BaseAudioContext": {
+        "enumN": {
+          "ref": 29,
+          "lv8": 26
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 27,
+          "lv8": 27
+        },
+        "value_diff": []
+      },
+      "Blob": {
+        "enumN": {
+          "ref": 6,
+          "lv8": 6
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 7,
+          "lv8": 7
+        },
+        "value_diff": []
+      },
+      "CSSStyleDeclaration": {
+        "enumN": {
+          "ref": 9,
+          "lv8": 9
+        },
+        "ref_only": [],
+        "lv8_only": [
+          "__lv8CssInNames",
+          "accentColor",
+          "alignContent",
+          "alignItems",
+          "alignSelf",
+          "alignmentBaseline",
+          "all",
+          "anchorName",
+          "animationComposition",
+          "animationDelay",
+          "animationDirection",
+          "animationDuration",
+          "animationFillMode",
+          "animationIterationCount",
+          "animationName",
+          "animationPlayState",
+          "animationRangeEnd",
+          "animationRangeStart",
+          "animationTimeline",
+          "animationTimingFunction",
+          "appRegion",
+          "appearance",
+          "backdropFilter",
+          "backfaceVisibility",
+          "backgroundAttachment",
+          "backgroundBlendMode",
+          "backgroundClip",
+          "backgroundColor",
+          "backgroundImage",
+          "backgroundOrigin",
+          "backgroundPosition",
+          "backgroundRepeat",
+          "backgroundSize",
+          "baselineShift",
+          "baselineSource",
+          "blockSize",
+          "borderBlockEndColor",
+          "borderBlockEndStyle",
+          "borderBlockEndWidth",
+          "borderBlockStartColor",
+          "borderBlockStartStyle",
+          "borderBlockStartWidth",
+          "borderBottomColor",
+          "borderBottomLeftRadius",
+          "borderBottomRightRadius",
+          "borderBottomStyle",
+          "borderBottomWidth",
+          "borderCollapse",
+          "borderEndEndRadius",
+          "borderEndStartRadius",
+          "borderImageOutset",
+          "borderImageRepeat",
+          "borderImageSlice",
+          "borderImageSource",
+          "borderImageWidth",
+          "borderInlineEndColor",
+          "borderInlineEndStyle",
+          "borderInlineEndWidth",
+          "borderInlineStartColor",
+          "borderInlineStartStyle",
+          "borderInlineStartWidth",
+          "borderLeftColor",
+          "borderLeftStyle",
+          "borderLeftWidth",
+          "borderRightColor",
+          "borderRightStyle",
+          "borderRightWidth",
+          "borderStartEndRadius",
+          "borderStartStartRadius",
+          "borderTopColor",
+          "borderTopLeftRadius",
+          "borderTopRightRadius",
+          "borderTopStyle",
+          "borderTopWidth",
+          "bottom",
+          "boxShadow",
+          "boxSizing",
+          "breakAfter",
+          "breakBefore",
+          "breakInside",
+          "bufferedRendering",
+          "captionSide",
+          "caretColor",
+          "clear",
+          "clip",
+          "clipPath",
+          "clipRule",
+          "color",
+          "colorInterpolation",
+          "colorInterpolationFilters",
+          "colorRendering",
+          "colorScheme",
+          "columnCount",
+          "columnGap",
+          "columnRuleColor",
+          "columnRuleStyle",
+          "columnRuleWidth",
+          "columnSpan",
+          "columnWidth",
+          "containIntrinsicBlockSize",
+          "containIntrinsicHeight",
+          "containIntrinsicInlineSize",
+          "containIntrinsicSize",
+          "containIntrinsicWidth",
+          "containerName",
+          "containerType",
+          "content",
+          "counterIncrement",
+          "counterSet",
+          "cursor",
+          "cx",
+          "cy",
+          "d",
+          "direction",
+          "display",
+          "dominantBaseline",
+          "emptyCells",
+          "fieldSizing",
+          "fill",
+          "fillOpacity",
+          "fillRule",
+          "filter",
+          "flexBasis",
+          "flexDirection",
+          "flexGrow",
+          "flexShrink",
+          "flexWrap",
+          "float",
+          "floodColor",
+          "floodOpacity",
+          "fontFamily",
+          "fontKerning",
+          "fontOpticalSizing",
+          "fontPalette",
+          "fontSize",
+          "fontStretch",
+          "fontStyle",
+          "fontSynthesisSmallCaps",
+          "fontSynthesisStyle",
+          "fontSynthesisWeight",
+          "fontVariant",
+          "fontVariantAlternates",
+          "fontVariantCaps",
+          "fontVariantEastAsian",
+          "fontVariantLigatures",
+          "fontVariantNumeric",
+          "fontVariantPosition",
+          "fontWeight",
+          "gridAutoColumns",
+          "gridAutoFlow",
+          "gridAutoRows",
+          "gridColumnEnd",
+          "gridColumnStart",
+          "gridRowEnd",
+          "gridRowStart",
+          "gridTemplateAreas",
+          "gridTemplateColumns",
+          "gridTemplateRows",
+          "height",
+          "hyphenateCharacter",
+          "hyphenateLimitChars",
+          "hyphens",
+          "imageOrientation",
+          "imageRendering",
+          "initialLetter",
+          "inlineSize",
+          "insetArea",
+          "insetBlockEnd",
+          "insetBlockStart",
+          "insetInlineEnd",
+          "insetInlineStart",
+          "isolation",
+          "justifyContent",
+          "justifyItems",
+          "justifySelf",
+          "left",
+          "letterSpacing",
+          "lightingColor",
+          "lineBreak",
+          "lineHeight",
+          "listStyleImage",
+          "listStylePosition",
+          "listStyleType",
+          "marginBlockEnd",
+          "marginBlockStart",
+          "marginBottom",
+          "marginInlineEnd",
+          "marginInlineStart",
+          "marginLeft",
+          "marginRight",
+          "marginTop",
+          "markerEnd",
+          "markerMid",
+          "markerStart",
+          "maskClip",
+          "maskComposite",
+          "maskImage",
+          "maskMode",
+          "maskOrigin",
+          "maskPosition",
+          "maskRepeat",
+          "maskSize",
+          "maskType",
+          "mathDepth",
+          "mathShift",
+          "mathStyle",
+          "maxBlockSize",
+          "maxHeight",
+          "maxInlineSize",
+          "maxWidth",
+          "minBlockSize",
+          "minHeight",
+          "minInlineSize",
+          "minWidth",
+          "mixBlendMode",
+          "objectFit",
+          "objectPosition",
+          "objectViewBox",
+          "offsetAnchor",
+          "offsetDistance",
+          "offsetPath",
+          "offsetPosition",
+          "offsetRotate",
+          "opacity",
+          "order",
+          "orphans",
+          "outlineColor",
+          "outlineOffset",
+          "outlineStyle",
+          "outlineWidth",
+          "overflowAnchor",
+          "overflowClipMargin",
+          "overflowWrap",
+          "overflowX",
+          "overflowY",
+          "overlay",
+          "overscrollBehaviorBlock",
+          "overscrollBehaviorInline",
+          "paddingBlockEnd",
+          "paddingBlockStart",
+          "paddingBottom",
+          "paddingInlineEnd",
+          "paddingInlineStart",
+          "paddingLeft",
+          "paddingRight",
+          "paddingTop",
+          "paintOrder",
+          "perspective",
+          "perspectiveOrigin",
+          "pointerEvents",
+          "position",
+          "positionAnchor",
+          "positionTry",
+          "positionTryOptions",
+          "positionTryOrder",
+          "positionVisibility",
+          "r",
+          "resize",
+          "right",
+          "rotate",
+          "rowGap",
+          "rubyPosition",
+          "rx",
+          "ry",
+          "scale",
+          "scrollBehavior",
+          "scrollMarginBlockEnd",
+          "scrollMarginBlockStart",
+          "scrollMarginInlineEnd",
+          "scrollMarginInlineStart",
+          "scrollPaddingBlockEnd",
+          "scrollPaddingBlockStart",
+          "scrollPaddingInlineEnd",
+          "scrollPaddingInlineStart",
+          "scrollTimelineAxis",
+          "scrollTimelineName",
+          "scrollbarColor",
+          "scrollbarGutter",
+          "scrollbarWidth",
+          "shapeImageThreshold",
+          "shapeMargin",
+          "shapeOutside",
+          "shapeRendering",
+          "speak",
+          "stopColor",
+          "stopOpacity",
+          "stroke",
+          "strokeDasharray",
+          "strokeDashoffset",
+          "strokeLinecap",
+          "strokeLinejoin",
+          "strokeMiterlimit",
+          "strokeOpacity",
+          "strokeWidth",
+          "tabSize",
+          "tableLayout",
+          "textAlign",
+          "textAlignLast",
+          "textAnchor",
+          "textDecoration",
+          "textDecorationColor",
+          "textDecorationLine",
+          "textDecorationSkipInk",
+          "textDecorationStyle",
+          "textEmphasisColor",
+          "textEmphasisPosition",
+          "textEmphasisStyle",
+          "textIndent",
+          "textOverflow",
+          "textRendering",
+          "textShadow",
+          "textSizeAdjust",
+          "textSpacingTrim",
+          "textTransform",
+          "textUnderlinePosition",
+          "textWrap",
+          "timelineScope",
+          "top",
+          "touchAction",
+          "transform",
+          "transformOrigin",
+          "transformStyle",
+          "transitionBehavior",
+          "transitionDelay",
+          "transitionDuration",
+          "transitionProperty",
+          "transitionTimingFunction",
+          "translate",
+          "unicodeBidi",
+          "userSelect",
+          "vectorEffect",
+          "verticalAlign",
+          "viewTimelineAxis",
+          "viewTimelineInset",
+          "viewTimelineName",
+          "viewTransitionClass",
+          "viewTransitionName",
+          "visibility",
+          "webkitAlignContent",
+          "webkitAlignItems",
+          "webkitAlignSelf",
+          "webkitAnimation",
+          "webkitAnimationDelay",
+          "webkitAnimationDirection",
+          "webkitAnimationDuration",
+          "webkitAnimationFillMode",
+          "webkitAnimationIterationCount",
+          "webkitAnimationName",
+          "webkitAnimationPlayState",
+          "webkitAnimationTimingFunction",
+          "webkitAppRegion",
+          "webkitAppearance",
+          "webkitBackfaceVisibility",
+          "webkitBackgroundClip",
+          "webkitBackgroundOrigin",
+          "webkitBackgroundSize",
+          "webkitBorderBottomLeftRadius",
+          "webkitBorderBottomRightRadius",
+          "webkitBorderRadius",
+          "webkitBorderTopLeftRadius",
+          "webkitBorderTopRightRadius",
+          "webkitBoxDirection",
+          "webkitBoxOrient",
+          "webkitBoxShadow",
+          "webkitBoxSizing",
+          "webkitClipPath",
+          "webkitColumnCount",
+          "webkitColumnGap",
+          "webkitColumnRuleColor",
+          "webkitColumnRuleStyle",
+          "webkitColumnRuleWidth",
+          "webkitColumnSpan",
+          "webkitColumnWidth",
+          "webkitFilter",
+          "webkitFlexBasis",
+          "webkitFlexDirection",
+          "webkitFlexGrow",
+          "webkitFlexShrink",
+          "webkitFlexWrap",
+          "webkitHyphenateCharacter",
+          "webkitJustifyContent",
+          "webkitLineBreak",
+          "webkitLineClamp",
+          "webkitMaskClip",
+          "webkitMaskComposite",
+          "webkitMaskImage",
+          "webkitMaskOrigin",
+          "webkitMaskPosition",
+          "webkitMaskRepeat",
+          "webkitMaskSize",
+          "webkitOpacity",
+          "webkitOrder",
+          "webkitPerspective",
+          "webkitPerspectiveOrigin",
+          "webkitRubyPosition",
+          "webkitShapeImageThreshold",
+          "webkitShapeMargin",
+          "webkitShapeOutside",
+          "webkitTapHighlightColor",
+          "webkitTextEmphasisColor",
+          "webkitTextEmphasisPosition",
+          "webkitTextEmphasisStyle",
+          "webkitTextSizeAdjust",
+          "webkitTextStroke",
+          "webkitTransform",
+          "webkitTransformOrigin",
+          "webkitTransformStyle",
+          "webkitTransition",
+          "webkitTransitionDelay",
+          "webkitTransitionDuration",
+          "webkitTransitionProperty",
+          "webkitTransitionTimingFunction",
+          "webkitUserSelect",
+          "webkitWritingMode",
+          "whiteSpaceCollapse",
+          "widows",
+          "width",
+          "willChange",
+          "wordBreak",
+          "wordSpacing",
+          "writingMode",
+          "x",
+          "y",
+          "zIndex",
+          "zoom"
+        ],
+        "ownN": {
+          "ref": 10,
+          "lv8": 435
+        },
+        "value_diff": []
+      },
+      "CanvasRenderingContext2D": {
+        "enumN": {
+          "ref": 69,
+          "lv8": 69
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 70,
+          "lv8": 70
+        },
+        "value_diff": []
+      },
+      "Comment": {
+        "enumN": {
+          "ref": 63,
+          "lv8": 0
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 1,
+          "lv8": 1
+        },
+        "value_diff": []
+      },
+      "DOMTokenList": {
+        "enumN": {
+          "ref": 14,
+          "lv8": 14
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 15,
+          "lv8": 15
+        },
+        "value_diff": []
+      },
+      "Document": {
+        "enumN": {
+          "ref": 285,
+          "lv8": 235
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 236,
+          "lv8": 236
+        },
+        "value_diff": []
+      },
+      "Element": {
+        "enumN": {
+          "ref": 236,
+          "lv8": 236
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 187,
+          "lv8": 187
+        },
+        "value_diff": []
+      },
+      "EventTarget": {
+        "enumN": {
+          "ref": 3,
+          "lv8": 3
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 4,
+          "lv8": 4
+        },
+        "value_diff": []
+      },
+      "FormData": {
+        "enumN": {
+          "ref": 10,
+          "lv8": 10
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 11,
+          "lv8": 11
+        },
+        "value_diff": []
+      },
+      "HTMLAnchorElement": {
+        "enumN": {
+          "ref": 301,
+          "lv8": 301
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 26,
+          "lv8": 26
+        },
+        "value_diff": []
+      },
+      "HTMLCanvasElement": {
+        "enumN": {
+          "ref": 283,
+          "lv8": 283
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 8,
+          "lv8": 8
+        },
+        "value_diff": []
+      },
+      "HTMLCollection": {
+        "enumN": {
+          "ref": 3,
+          "lv8": 3
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 4,
+          "lv8": 4
+        },
+        "value_diff": []
+      },
+      "HTMLDivElement": {
+        "enumN": {
+          "ref": 277,
+          "lv8": 277
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 2,
+          "lv8": 2
+        },
+        "value_diff": []
+      },
+      "HTMLElement": {
+        "enumN": {
+          "ref": 276,
+          "lv8": 276
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 139,
+          "lv8": 139
+        },
+        "value_diff": []
+      },
+      "HTMLFormElement": {
+        "enumN": {
+          "ref": 292,
+          "lv8": 292
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 17,
+          "lv8": 17
+        },
+        "value_diff": []
+      },
+      "HTMLImageElement": {
+        "enumN": {
+          "ref": 303,
+          "lv8": 303
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 28,
+          "lv8": 28
+        },
+        "value_diff": []
+      },
+      "HTMLInputElement": {
+        "enumN": {
+          "ref": 332,
+          "lv8": 332
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 57,
+          "lv8": 57
+        },
+        "value_diff": []
+      },
+      "HTMLMediaElement": {
+        "enumN": {
+          "ref": 321,
+          "lv8": 321
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 46,
+          "lv8": 46
+        },
+        "value_diff": []
+      },
+      "HTMLScriptElement": {
+        "enumN": {
+          "ref": 291,
+          "lv8": 291
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 16,
+          "lv8": 16
+        },
+        "value_diff": []
+      },
+      "Headers": {
+        "enumN": {
+          "ref": 10,
+          "lv8": 10
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 11,
+          "lv8": 11
+        },
+        "value_diff": []
+      },
+      "History": {
+        "enumN": {
+          "ref": 8,
+          "lv8": 8
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 9,
+          "lv8": 9
+        },
+        "value_diff": []
+      },
+      "Location": {
+        "enumN": {
+          "ref": 0,
+          "lv8": 0
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 1,
+          "lv8": 1
+        },
+        "value_diff": []
+      },
+      "Navigator": {
+        "enumN": {
+          "ref": 31,
+          "lv8": 68
+        },
+        "ref_only": [],
+        "lv8_only": [
+          "bluetooth",
+          "canShare",
+          "clearAppBadge",
+          "clipboard",
+          "cookieDeprecationLabel",
+          "credentials",
+          "deviceMemory",
+          "getBattery",
+          "getUserMedia",
+          "gpu",
+          "hid",
+          "ink",
+          "keyboard",
+          "locks",
+          "login",
+          "managed",
+          "mediaCapabilities",
+          "mediaDevices",
+          "mediaSession",
+          "permissions",
+          "presentation",
+          "registerProtocolHandler",
+          "requestMIDIAccess",
+          "requestMediaKeySystemAccess",
+          "serial",
+          "serviceWorker",
+          "setAppBadge",
+          "share",
+          "storage",
+          "storageBuckets",
+          "unregisterProtocolHandler",
+          "usb",
+          "userAgentData",
+          "virtualKeyboard",
+          "wakeLock",
+          "webkitGetUserMedia",
+          "xr"
+        ],
+        "ownN": {
+          "ref": 32,
+          "lv8": 69
+        },
+        "value_diff": []
+      },
+      "Node": {
+        "enumN": {
+          "ref": 50,
+          "lv8": 50
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 48,
+          "lv8": 48
+        },
+        "value_diff": []
+      },
+      "NodeList": {
+        "enumN": {
+          "ref": 6,
+          "lv8": 6
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 7,
+          "lv8": 7
+        },
+        "value_diff": []
+      },
+      "OscillatorNode": {
+        "enumN": {
+          "ref": 18,
+          "lv8": 4
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 5,
+          "lv8": 5
+        },
+        "value_diff": []
+      },
+      "Performance": {
+        "enumN": {
+          "ref": 20,
+          "lv8": 17
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 18,
+          "lv8": 18
+        },
+        "value_diff": []
+      },
+      "Request": {
+        "enumN": {
+          "ref": 24,
+          "lv8": 24
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 25,
+          "lv8": 25
+        },
+        "value_diff": []
+      },
+      "Response": {
+        "enumN": {
+          "ref": 15,
+          "lv8": 15
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 16,
+          "lv8": 16
+        },
+        "value_diff": []
+      },
+      "Screen": {
+        "enumN": {
+          "ref": 12,
+          "lv8": 14
+        },
+        "ref_only": [],
+        "lv8_only": [
+          "isExtended",
+          "onchange"
+        ],
+        "ownN": {
+          "ref": 10,
+          "lv8": 12
+        },
+        "value_diff": []
+      },
+      "Storage": {
+        "enumN": {
+          "ref": 6,
+          "lv8": 6
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 7,
+          "lv8": 7
+        },
+        "value_diff": []
+      },
+      "Text": {
+        "enumN": {
+          "ref": 66,
+          "lv8": 3
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 4,
+          "lv8": 4
+        },
+        "value_diff": []
+      },
+      "URL": {
+        "enumN": {
+          "ref": 14,
+          "lv8": 14
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 15,
+          "lv8": 15
+        },
+        "value_diff": []
+      },
+      "URLSearchParams": {
+        "enumN": {
+          "ref": 13,
+          "lv8": 13
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 14,
+          "lv8": 14
+        },
+        "value_diff": []
+      },
+      "WebGL2RenderingContext": {
+        "enumN": {
+          "ref": 754,
+          "lv8": 318
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 319,
+          "lv8": 319
+        },
+        "value_diff": []
+      },
+      "WebGLRenderingContext": {
+        "enumN": {
+          "ref": 436,
+          "lv8": 436
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 437,
+          "lv8": 437
+        },
+        "value_diff": []
+      },
+      "Worker": {
+        "enumN": {
+          "ref": 5,
+          "lv8": 5
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 3,
+          "lv8": 3
+        },
+        "value_diff": []
+      }
+    },
+    "schemaVersion": 1,
+    "shimmed": [
+      "CSSStyleDeclaration",
+      "Navigator",
+      "Screen"
+    ],
+    "shims": {
+      "CSSStyleDeclaration": {
+        "members": 425,
+        "reason": "Chrome-style camelCase CSS property accessors on the prototype; the reference keeps them off the prototype.",
+        "removal": "available behind profile='reference-exact'; removing it from the default profile requires updating the pytest/surface-audit expectations first.",
+        "risk": "`for-in`/own-name scans over CSSStyleDeclaration.prototype see the extra names (the SDK reads them).",
+        "source": "shim"
+      },
+      "Navigator": {
+        "members": 37,
+        "reason": "Chrome-style Navigator APIs (userAgentData, clipboard, credentials, ...) that the reference wheel does not expose before the page script runs.",
+        "removal": "available behind profile='reference-exact'.",
+        "risk": "the SDK's feature sweep reads all 37 and folds the result into its packed state.",
+        "source": "shim"
+      },
+      "Screen": {
+        "members": 2,
+        "reason": "isExtended/onchange are lv8-only screen members.",
+        "removal": "available behind profile='reference-exact'.",
+        "risk": "own-name scan difference on Screen.prototype.",
+        "source": "shim"
+      }
+    }
+  },
+  "reference-exact": {
+    "aligned": [
+      "AbortController",
+      "AbortSignal",
+      "AudioBuffer",
+      "AudioContext",
+      "AudioNode",
+      "BaseAudioContext",
+      "Blob",
+      "CSSStyleDeclaration",
+      "CanvasRenderingContext2D",
+      "Comment",
+      "DOMTokenList",
+      "Document",
+      "Element",
+      "EventTarget",
+      "FormData",
+      "HTMLAnchorElement",
+      "HTMLCanvasElement",
+      "HTMLCollection",
+      "HTMLDivElement",
+      "HTMLElement",
+      "HTMLFormElement",
+      "HTMLImageElement",
+      "HTMLInputElement",
+      "HTMLMediaElement",
+      "HTMLScriptElement",
+      "Headers",
+      "History",
+      "Location",
+      "Navigator",
+      "Node",
+      "NodeList",
+      "OscillatorNode",
+      "Performance",
+      "Request",
+      "Response",
+      "Screen",
+      "Storage",
+      "Text",
+      "URL",
+      "URLSearchParams",
+      "WebGL2RenderingContext",
+      "WebGLRenderingContext",
+      "Worker"
+    ],
+    "misaligned": [],
+    "mode": "reference-exact",
+    "prototypes": {
+      "AbortController": {
+        "enumN": {
+          "ref": 2,
+          "lv8": 2
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 3,
+          "lv8": 3
+        },
+        "value_diff": []
+      },
+      "AbortSignal": {
+        "enumN": {
+          "ref": 7,
+          "lv8": 4
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 5,
+          "lv8": 5
+        },
+        "value_diff": []
+      },
+      "AudioBuffer": {
+        "enumN": {
+          "ref": 7,
+          "lv8": 7
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 8,
+          "lv8": 8
+        },
+        "value_diff": []
+      },
+      "AudioContext": {
+        "enumN": {
+          "ref": 41,
+          "lv8": 38
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 13,
+          "lv8": 13
+        },
+        "value_diff": []
+      },
+      "AudioNode": {
+        "enumN": {
+          "ref": 11,
+          "lv8": 8
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 9,
+          "lv8": 9
+        },
+        "value_diff": []
+      },
+      "BaseAudioContext": {
+        "enumN": {
+          "ref": 29,
+          "lv8": 26
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 27,
+          "lv8": 27
+        },
+        "value_diff": []
+      },
+      "Blob": {
+        "enumN": {
+          "ref": 6,
+          "lv8": 6
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 7,
+          "lv8": 7
+        },
+        "value_diff": []
+      },
+      "CSSStyleDeclaration": {
+        "enumN": {
+          "ref": 9,
+          "lv8": 9
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 10,
+          "lv8": 10
+        },
+        "value_diff": []
+      },
+      "CanvasRenderingContext2D": {
+        "enumN": {
+          "ref": 69,
+          "lv8": 69
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 70,
+          "lv8": 70
+        },
+        "value_diff": []
+      },
+      "Comment": {
+        "enumN": {
+          "ref": 63,
+          "lv8": 0
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 1,
+          "lv8": 1
+        },
+        "value_diff": []
+      },
+      "DOMTokenList": {
+        "enumN": {
+          "ref": 14,
+          "lv8": 14
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 15,
+          "lv8": 15
+        },
+        "value_diff": []
+      },
+      "Document": {
+        "enumN": {
+          "ref": 285,
+          "lv8": 235
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 236,
+          "lv8": 236
+        },
+        "value_diff": []
+      },
+      "Element": {
+        "enumN": {
+          "ref": 236,
+          "lv8": 236
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 187,
+          "lv8": 187
+        },
+        "value_diff": []
+      },
+      "EventTarget": {
+        "enumN": {
+          "ref": 3,
+          "lv8": 3
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 4,
+          "lv8": 4
+        },
+        "value_diff": []
+      },
+      "FormData": {
+        "enumN": {
+          "ref": 10,
+          "lv8": 10
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 11,
+          "lv8": 11
+        },
+        "value_diff": []
+      },
+      "HTMLAnchorElement": {
+        "enumN": {
+          "ref": 301,
+          "lv8": 301
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 26,
+          "lv8": 26
+        },
+        "value_diff": []
+      },
+      "HTMLCanvasElement": {
+        "enumN": {
+          "ref": 283,
+          "lv8": 283
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 8,
+          "lv8": 8
+        },
+        "value_diff": []
+      },
+      "HTMLCollection": {
+        "enumN": {
+          "ref": 3,
+          "lv8": 3
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 4,
+          "lv8": 4
+        },
+        "value_diff": []
+      },
+      "HTMLDivElement": {
+        "enumN": {
+          "ref": 277,
+          "lv8": 277
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 2,
+          "lv8": 2
+        },
+        "value_diff": []
+      },
+      "HTMLElement": {
+        "enumN": {
+          "ref": 276,
+          "lv8": 276
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 139,
+          "lv8": 139
+        },
+        "value_diff": []
+      },
+      "HTMLFormElement": {
+        "enumN": {
+          "ref": 292,
+          "lv8": 292
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 17,
+          "lv8": 17
+        },
+        "value_diff": []
+      },
+      "HTMLImageElement": {
+        "enumN": {
+          "ref": 303,
+          "lv8": 303
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 28,
+          "lv8": 28
+        },
+        "value_diff": []
+      },
+      "HTMLInputElement": {
+        "enumN": {
+          "ref": 332,
+          "lv8": 332
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 57,
+          "lv8": 57
+        },
+        "value_diff": []
+      },
+      "HTMLMediaElement": {
+        "enumN": {
+          "ref": 321,
+          "lv8": 321
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 46,
+          "lv8": 46
+        },
+        "value_diff": []
+      },
+      "HTMLScriptElement": {
+        "enumN": {
+          "ref": 291,
+          "lv8": 291
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 16,
+          "lv8": 16
+        },
+        "value_diff": []
+      },
+      "Headers": {
+        "enumN": {
+          "ref": 10,
+          "lv8": 10
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 11,
+          "lv8": 11
+        },
+        "value_diff": []
+      },
+      "History": {
+        "enumN": {
+          "ref": 8,
+          "lv8": 8
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 9,
+          "lv8": 9
+        },
+        "value_diff": []
+      },
+      "Location": {
+        "enumN": {
+          "ref": 0,
+          "lv8": 0
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 1,
+          "lv8": 1
+        },
+        "value_diff": []
+      },
+      "Navigator": {
+        "enumN": {
+          "ref": 31,
+          "lv8": 31
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 32,
+          "lv8": 32
+        },
+        "value_diff": []
+      },
+      "Node": {
+        "enumN": {
+          "ref": 50,
+          "lv8": 50
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 48,
+          "lv8": 48
+        },
+        "value_diff": []
+      },
+      "NodeList": {
+        "enumN": {
+          "ref": 6,
+          "lv8": 6
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 7,
+          "lv8": 7
+        },
+        "value_diff": []
+      },
+      "OscillatorNode": {
+        "enumN": {
+          "ref": 18,
+          "lv8": 4
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 5,
+          "lv8": 5
+        },
+        "value_diff": []
+      },
+      "Performance": {
+        "enumN": {
+          "ref": 20,
+          "lv8": 17
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 18,
+          "lv8": 18
+        },
+        "value_diff": []
+      },
+      "Request": {
+        "enumN": {
+          "ref": 24,
+          "lv8": 24
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 25,
+          "lv8": 25
+        },
+        "value_diff": []
+      },
+      "Response": {
+        "enumN": {
+          "ref": 15,
+          "lv8": 15
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 16,
+          "lv8": 16
+        },
+        "value_diff": []
+      },
+      "Screen": {
+        "enumN": {
+          "ref": 12,
+          "lv8": 12
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 10,
+          "lv8": 10
+        },
+        "value_diff": []
+      },
+      "Storage": {
+        "enumN": {
+          "ref": 6,
+          "lv8": 6
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 7,
+          "lv8": 7
+        },
+        "value_diff": []
+      },
+      "Text": {
+        "enumN": {
+          "ref": 66,
+          "lv8": 3
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 4,
+          "lv8": 4
+        },
+        "value_diff": []
+      },
+      "URL": {
+        "enumN": {
+          "ref": 14,
+          "lv8": 14
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 15,
+          "lv8": 15
+        },
+        "value_diff": []
+      },
+      "URLSearchParams": {
+        "enumN": {
+          "ref": 13,
+          "lv8": 13
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 14,
+          "lv8": 14
+        },
+        "value_diff": []
+      },
+      "WebGL2RenderingContext": {
+        "enumN": {
+          "ref": 754,
+          "lv8": 318
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 319,
+          "lv8": 319
+        },
+        "value_diff": []
+      },
+      "WebGLRenderingContext": {
+        "enumN": {
+          "ref": 436,
+          "lv8": 436
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 437,
+          "lv8": 437
+        },
+        "value_diff": []
+      },
+      "Worker": {
+        "enumN": {
+          "ref": 5,
+          "lv8": 5
+        },
+        "ref_only": [],
+        "lv8_only": [],
+        "ownN": {
+          "ref": 3,
+          "lv8": 3
+        },
+        "value_diff": []
+      }
+    },
+    "schemaVersion": 1,
+    "shimmed": [],
+    "shims": {}
+  },
+  "schemaVersion": 1
+}

@@ -1,0 +1,45 @@
+"""Generated from work/reference-traces/_m19_thinvalues.json (reference ground truth,
+M19 probe, jv() stringification decoded one layer); do not hand-edit.
+Snapshot property VALUES for the thin-instance constructors."""
+
+from __future__ import annotations
+
+REF_CTOR_THINVALUES: dict = {
+    "Accelerometer": {'x': None, 'y': None, 'z': None},
+    "CSSMathMax": {'values': []},
+    "CSSMathMin": {'values': []},
+    "CSSStyleSheet": {'ownerRule': None, 'cssRules': None, 'rules': None},
+    "DOMRectReadOnly": {'x': 0, 'y': 0, 'width': 0, 'height': 0, 'top': 0, 'right': 0, 'bottom': 0, 'left': 0},
+    "DocumentFragment": {'children': None, 'firstElementChild': None, 'lastElementChild': None, 'childElementCount': 0},
+    "EditContext": {'text': '', 'selectionStart': 0, 'selectionEnd': 0, 'ontextupdate': None, 'ontextformatupdate': None, 'oncharacterboundsupdate': None, 'oncompositionstart': None, 'oncompositionend': None},
+    "Gyroscope": {'x': None, 'y': None, 'z': None},
+    "HTMLDirectoryElement": {'compact': False},
+    "HTMLLIElement": {'value': 0},
+    "HTMLMarqueeElement": {'behavior': '', 'bgColor': '', 'direction': '', 'height': '', 'hspace': 0, 'loop': -1, 'scrollAmount': 6, 'scrollDelay': 85, 'trueSpeed': False, 'vspace': 0, 'width': ''},
+    "Highlight": {'priority': 0, 'type': 'highlight', 'size': 0},
+    "IdentityCredentialError": {'code': '', 'url': ''},
+    "InputDeviceCapabilities": {'firesTouchEvents': False},
+    "MediaMetadata": {'title': '', 'artist': '', 'album': '', 'artwork': []},
+    "MediaSource": {'sourceBuffers': None, 'activeSourceBuffers': None, 'onsourceopen': None, 'onsourceended': None, 'onsourceclose': None},
+    "MediaStream": {'active': False, 'onaddtrack': None, 'onremovetrack': None, 'onactive': None, 'oninactive': None},
+    "RTCIceCandidate": {'candidate': None, 'sdpMid': None, 'sdpMLineIndex': 0, 'foundation': None, 'component': None, 'priority': 0, 'address': None, 'protocol': None, 'port': 0, 'type': None, 'tcpType': None, 'relatedAddress': None, 'relatedPort': 0, 'usernameFragment': None, 'relayProtocol': None, 'url': None},
+    "RTCSessionDescription": {'type': None, 'sdp': None},
+    "Range": {'commonAncestorContainer': None, 'START_TO_START': 0, 'START_TO_END': 1, 'END_TO_END': 2, 'END_TO_START': 3},
+    "SVGAngle": {'SVG_ANGLETYPE_UNKNOWN': 0, 'SVG_ANGLETYPE_UNSPECIFIED': 1, 'SVG_ANGLETYPE_DEG': 2, 'SVG_ANGLETYPE_RAD': 3, 'SVG_ANGLETYPE_GRAD': 4, 'unitType': 1, 'value': 0, 'valueInSpecifiedUnits': 0, 'valueAsString': '0.000000'},
+    "SVGLength": {'SVG_LENGTHTYPE_UNKNOWN': 0, 'SVG_LENGTHTYPE_NUMBER': 1, 'SVG_LENGTHTYPE_PERCENTAGE': 2, 'SVG_LENGTHTYPE_EMS': 3, 'SVG_LENGTHTYPE_EXS': 4, 'SVG_LENGTHTYPE_PX': 5, 'SVG_LENGTHTYPE_CM': 6, 'SVG_LENGTHTYPE_MM': 7, 'SVG_LENGTHTYPE_IN': 8, 'SVG_LENGTHTYPE_PT': 9, 'SVG_LENGTHTYPE_PC': 10, 'unitType': 1, 'value': 0, 'valueInSpecifiedUnits': 0, 'valueAsString': '0'},
+    "SVGRect": {'x': 0, 'y': 0, 'width': 0, 'height': 0},
+    "ScrollTimeline": {'source': None},
+    "SpeechGrammar": {'src': '', 'weight': 1},
+    "SpeechGrammarList": {'length': 0},
+    "Text": {'wholeText': '', 'assignedSlot': None},
+    "TextFormat": {'rangeStart': 0, 'rangeEnd': 0, 'underlineStyle': 'none', 'underlineThickness': 'none'},
+    "VideoColorSpace": {'primaries': None, 'transfer': None, 'matrix': None, 'fullRange': None},
+    "ViewTimeline": {'subject': None, 'startOffset': None, 'endOffset': None},
+    "WebKitCSSMatrix": {'a': 1, 'b': 0, 'c': 0, 'd': 1, 'e': 0, 'f': 0, 'm11': 1, 'm12': 0, 'm13': 0, 'm14': 0, 'm21': 0, 'm22': 1, 'm23': 0, 'm24': 0, 'm31': 0, 'm32': 0, 'm33': 1, 'm34': 0, 'm41': 0, 'm42': 0, 'm43': 0, 'm44': 1},
+    "WebSocketError": {'closeCode': None, 'reason': ''},
+    "WebTransportError": {'streamErrorCode': None, 'source': 'stream'},
+    "XRRay": {'origin': {'x': 0, 'y': 0, 'z': 0, 'w': 1}, 'direction': {'x': 0, 'y': 0, 'z': -1, 'w': 0}, 'matrix': {'0': 1, '1': 0, '2': 0, '3': 0, '4': 0, '5': 1, '6': 0, '7': 0, '8': 0, '9': 0, '10': 1, '11': 0, '12': 0, '13': 0, '14': 0, '15': 1}},
+    "XRRigidTransform": {'position': {'x': 0, 'y': 0, 'z': 0, 'w': 1}, 'orientation': {'x': 0, 'y': 0, 'z': 0, 'w': 1}, 'matrix': {'0': 1, '1': 0, '2': 0, '3': 0, '4': 0, '5': 1, '6': 0, '7': 0, '8': 0, '9': 0, '10': 1, '11': 0, '12': 0, '13': 0, '14': 0, '15': 1}, 'inverse': {}},
+    "webkitMediaStream": {'active': False, 'onaddtrack': None, 'onremovetrack': None, 'onactive': None, 'oninactive': None},
+    "webkitRTCPeerConnection": {'localDescription': None, 'currentLocalDescription': None, 'pendingLocalDescription': None, 'remoteDescription': None, 'currentRemoteDescription': None, 'pendingRemoteDescription': None, 'signalingState': 'stable', 'iceGatheringState': 'new', 'iceConnectionState': 'new', 'connectionState': 'new', 'canTrickleIceCandidates': None, 'onnegotiationneeded': None, 'onicecandidate': None, 'onsignalingstatechange': None, 'oniceconnectionstatechange': None, 'onconnectionstatechange': None, 'onicegatheringstatechange': None, 'onicecandidateerror': None, 'ontrack': None, 'ondatachannel': None, 'sctpTransport': None}
+}
